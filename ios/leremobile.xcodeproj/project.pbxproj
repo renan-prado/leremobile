@@ -32,6 +32,8 @@
 		2F57C96EF0FE46078F954326 /* Roboto-RegularItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 660283D8F0C64E37B7B66D15 /* Roboto-RegularItalic.ttf */; };
 		6A1D2A3E442245C7B5811424 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A35731574714486BAD496636 /* Roboto-Thin.ttf */; };
 		0CB3EB9B62914CDFA503A97F /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD7AD4D29CB043CB81EFEA7C /* Roboto-ThinItalic.ttf */; };
+		0170B10AE8BC48E38E9168E3 /* narnia (1).png in Resources */ = {isa = PBXBuildFile; fileRef = B2ED9BF4141C4C3AA0724D51 /* narnia (1).png */; };
+		554D38EDF7E74103B544A6DD /* narnia.png in Resources */ = {isa = PBXBuildFile; fileRef = 96454F85EE814F4D8C73A32B /* narnia.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		660283D8F0C64E37B7B66D15 /* Roboto-RegularItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-RegularItalic.ttf"; path = "../assets/fonts/Roboto/Roboto-RegularItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		A35731574714486BAD496636 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; name = "Roboto-Thin.ttf"; path = "../assets/fonts/Roboto/Roboto-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		FD7AD4D29CB043CB81EFEA7C /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; name = "Roboto-ThinItalic.ttf"; path = "../assets/fonts/Roboto/Roboto-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B2ED9BF4141C4C3AA0724D51 /* narnia (1).png */ = {isa = PBXFileReference; name = "narnia (1).png"; path = "../assets/images/narnia (1).png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		96454F85EE814F4D8C73A32B /* narnia.png */ = {isa = PBXFileReference; name = "narnia.png"; path = "../assets/images/narnia.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +215,8 @@
 				660283D8F0C64E37B7B66D15 /* Roboto-RegularItalic.ttf */,
 				A35731574714486BAD496636 /* Roboto-Thin.ttf */,
 				FD7AD4D29CB043CB81EFEA7C /* Roboto-ThinItalic.ttf */,
+				B2ED9BF4141C4C3AA0724D51 /* narnia (1).png */,
+				96454F85EE814F4D8C73A32B /* narnia.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -369,6 +375,8 @@
 				2F57C96EF0FE46078F954326 /* Roboto-RegularItalic.ttf in Resources */,
 				6A1D2A3E442245C7B5811424 /* Roboto-Thin.ttf in Resources */,
 				0CB3EB9B62914CDFA503A97F /* Roboto-ThinItalic.ttf in Resources */,
+				0170B10AE8BC48E38E9168E3 /* narnia (1).png in Resources */,
+				554D38EDF7E74103B544A6DD /* narnia.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
