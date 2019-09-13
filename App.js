@@ -5,7 +5,10 @@ import {
   StatusBar,
 } from 'react-native';
 
+import { YellowBox } from 'react-native';
+
 import Read from "./src/screens/Read";
+import FirebaseApp from "./src/screens/Firebase";
 import Home from "./src/screens/Home";
 
 const App = () => {
@@ -16,7 +19,9 @@ const App = () => {
 
         {/* <Read /> */}
 
-        <Home />
+        {/* <Home /> */}
+
+        <FirebaseApp />
       
       </SafeAreaView>
     </Fragment>
@@ -28,5 +33,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
+
+YellowBox.ignoreWarnings(['Setting a timer']);
 
 export default App;

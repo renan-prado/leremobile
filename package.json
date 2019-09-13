@@ -11,6 +11,7 @@
     "reload": "adb shell input text \"RR\""
   },
   "dependencies": {
+    "firebase": "^6.6.1",
     "react": "16.8.6",
     "react-native": "0.60.5"
   },
