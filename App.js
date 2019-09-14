@@ -17,9 +17,9 @@ const App = () => {
       <StatusBar barStyle="light-content"/>
       <SafeAreaView style={styles.container}>
 
-        {/* <Read /> */}
+        <Read />
 
-        <Home />
+        {/* <Home /> */}
 
         {/* <FirebaseApp /> */}
       
