@@ -11,11 +11,23 @@ export default class FirebaseApp extends Component {
 
     componentDidMount(){
 
-        Firebase.get('/users/002', data => this.setState({ name: data.name }))
+        // Firebase.get('/users/002', data => this.setState({ name: data.name }))
 
-        Firebase.save('/users/002', {
-            name: 'Jonas',
-            age: 20
+        // Firebase.createUser('renanprado96@gmail.com', 'egtsejbegtsejb', err => {})
+        Firebase.login('renanprado96@gmail.com', 'egtsejbegtsejb', err => {})
+        
+        // Firebase.save('/users/003', {
+        //     name: 'Jonas',
+        //     age: 20
+        // })
+
+
+        Firebase.get('/books/', data => this.setState({ name: data.name }))
+
+        Firebase.userLogged( books => {
+            if(books){
+                this.setState({ name: books.name })
+            }
         })
     }
 

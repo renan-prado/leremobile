@@ -19,9 +19,9 @@ const App = () => {
 
         {/* <Read /> */}
 
-        {/* <Home /> */}
+        <Home />
 
-        <FirebaseApp />
+        {/* <FirebaseApp /> */}
       
       </SafeAreaView>
     </Fragment>

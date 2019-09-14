@@ -1,4 +1,5 @@
 import firebase from 'firebase'
+import Axios from 'axios';
 
 var firebaseConfig = {
     apiKey: "AIzaSyCspKcdQP7dga2-TEnqYWOIlylipfs8aO4",
@@ -12,18 +13,39 @@ var firebaseConfig = {
 
 if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
 
+const userLogged = callback  => {
 
-module.exports.save = ( route, data, callback ) => {
-    
     firebase
-        .database()
-        .ref(route)
-        .set(data, callback)
+        .auth()
+        .onAuthStateChanged(function(user) {
+            if(callback){
+                if(user){ callback(user) }
+                else { callback(false) }
+            }
+        })
+}
+
+exports.save = ( route, data, callback ) => {
+    
+    userLogged(user => {
+
+        if(user){
+            firebase
+                .database()
+                .ref( (route ? '/users/' : '/') + user.uid +  route)
+                .set(data, callback)
+        }
+
+        else {    
+            callback(false);
+        }
+        
+    })
 
 };
 
 
-module.exports.get = ( route, callback ) => {
+exports.get = ( route, callback ) => {
 
     const starCountRef = firebase
         .database()
@@ -31,4 +53,45 @@ module.exports.get = ( route, callback ) => {
 
     starCountRef
         .on('value', snapshot => callback(snapshot.val()) );
+}
+
+
+exports.createUser = (email, password, callback) => {
+
+    firebase
+        .auth()
+        .createUserWithEmailAndPassword(email, password)
+        .catch(function(error) {
+            var { code, message } = error.code;
+            if(callback){
+                if(code){ callback(code, message)}
+                else { callback(false) }
+            }
+
+        });
+}
+
+
+exports.login = (email, password, callback)  => {
+
+    firebase
+        .auth()
+        .signInWithEmailAndPassword(email, password)
+        .catch(function(error) {
+            var { code, message } = error.code;
+            if(callback){
+                if(code){ callback(code, message)}
+                else { callback(false) }
+            }
+        });
+}
+
+exports.userLogged = userLogged
+
+exports.saveImage = (imageBase64, callback) => {
+
+    Axios
+        .post('https://us-central1-lere-a4fe1.cloudfunctions.net/uploadImage', {image: imageBase64 })
+        .catch(err => {console.error(err); callback(false, err)})
+        .then(resp => callback(resp.data)) // resp.data.imageUrl
 }
