@@ -1,7 +1,7 @@
 import { FlatList, ImageBackground, View, StyleSheet, Text, Dimensions } from 'react-native';
 import React, { Component } from "react";
 
-import Colors from "../../styles/Colors";
+import Colors from "../../Styles/Colors";
 import narniaImage from "../../../assets/images/narnia.png";
 
 export default class Feed extends Component {

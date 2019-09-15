@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from './node_modules/react'
 import { 
     StyleSheet,
     View,
@@ -6,9 +6,9 @@ import {
     TouchableOpacity
 } from "react-native";
 
-import Header from "../components/home/Header";
-import Feed from "../components/home/Feed";
-import Colors from "../styles/Colors";
+import Header from "../Componenta/home/Header";
+import Feed from "../Componenta/home/Feed";
+import Colors from "../Styles/Colors";
 
 class Read extends Component {
 

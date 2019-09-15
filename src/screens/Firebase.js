@@ -1,7 +1,7 @@
 import { Text, Image, View, StyleSheet, Dimensions } from 'react-native';
-import React, { Component } from "react";
+import React, { Component } from "./node_modules/react";
 
-import Firebase from '../database/Firebase'
+import Firebase from '../Database/Firebase'
 
 export default class FirebaseApp extends Component {
 

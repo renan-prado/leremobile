@@ -1,16 +1,15 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { Alert, Text } from 'react-native'
 
-import { TextBase, TextHighLight } from "../../styles/Presets";
-import TextHighLights from "../../components/read/TextHighLight";
+import { TextBase, TextHighLight } from "../../Styles/Presets";
+import TextHighLights from "../../Componenta/read/TextHighLight";
 
 module.exports.LerelContent = props => {
 
     const cleanText = props.children;
 
-    let getHighLight = cleanText => {
+    let getHighLight = expression => {
 
-        let expression = cleanText;
         let highLightList = [], textList = []
         let termCurrent  = '',
             typeCurrent  = '',
@@ -50,26 +49,28 @@ module.exports.LerelContent = props => {
 
         let textFormated = textList.map( (text, index) => {
 
-            return [<TextBase key={'text_' + index}>{text}</TextBase>, highLightList[index]]
+                return [text, highLightList[index]]
         })
 
-        return <View style={{flexDirection: 'row', flexWrap: 'wrap'}}>{textFormated}</View> 
+        return <TextBase> {textFormated}</TextBase> 
     }
 
     let renderText = (cleanText) => {
         
+        if( /##\((.*?){(.*?)}\)/g.exec(cleanText) == null ) return cleanText
+
         let { highLightList, textList } = getHighLight(cleanText);
         let highLightListFormated       = renderTextHighLight(highLightList, textList);
 
-        return <View >{ highLightListFormated }</View> 
+        return <TextBase>{ highLightListFormated }</TextBase> 
     }
 
-    let renderedText = renderText(cleanText)
+    let renderedText = renderText(cleanText[1])
 
     return (
-        <View>
+        <TextBase>
             { renderedText }
-        </View>
+        </TextBase>
     )
     
 }

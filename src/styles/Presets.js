@@ -1,5 +1,5 @@
-import { StyleSheet, Text } from 'react-native';
-import React from "react";
+import { StyleSheet, Text, Alert } from 'react-native';
+import React from "./node_modules/react";
 import Colors from "./Colors";
 import Fonts from "./Fonts";
 import Sizes from "./Sizes";
@@ -18,6 +18,7 @@ const textValues = {
         fontSize: Sizes.FONT_BASE,
         color: Colors.TEXT_PRIMARY,
         lineHeight: 25,
+        textAlign: 'justify'
     },
 
     TEXT_HIGH_LIGHT: {
@@ -34,7 +35,7 @@ const textStyles = StyleSheet.create({
     textTitle: {
       ...textValues.TEXT_TITLE,
       marginTop: 30,
-      marginBottom: 20
+      marginBottom: 40
     },
   
     textRead: {
@@ -50,5 +51,5 @@ const textStyles = StyleSheet.create({
 
 module.exports.textStyles = textStyles
 module.exports.TextTitle = props => <Text style={textStyles.textTitle}> { props.children } </Text>
-module.exports.TextBase = props => <Text style={textStyles.textRead}> { props.children } </Text>
-module.exports.TextHighLight = props => <Text style={textStyles.textHighLight}> { props.children } </Text>
+module.exports.TextBase = props => <Text selectable={true} style={textStyles.textRead}> { props.children } </Text>
+module.exports.TextHighLight = props => <Text onPress={() => Alert.alert('Info Word')} style={textStyles.textHighLight}> { props.children } </Text>

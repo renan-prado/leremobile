@@ -7,14 +7,14 @@ import {
 
 import { YellowBox } from 'react-native';
 
-import Read from "./src/screens/Read";
-import FirebaseApp from "./src/screens/Firebase";
-import Home from "./src/screens/Home";
+import Read from "./src/Screens/Read";
+import FirebaseApp from "./src/Screens/Firebase";
+import Home from "./src/Screens/Home";
 
 const App = () => {
   return (
     <Fragment>
-      <StatusBar barStyle="light-content"/>
+      <StatusBar backgroundColor="#444444" barStyle="light-content"/>
       <SafeAreaView style={styles.container}>
 
         <Read />
