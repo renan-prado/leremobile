@@ -8,7 +8,7 @@ import {
     Modal,
     TouchableOpacity,
     Alert,
-    Text
+    Button
 
 } from "react-native";
 
@@ -18,6 +18,7 @@ import { TextBase, TextTitle } from "../Styles/Presets";
 import { LerelContent } from "../methods/readArea/readAreaMethods";
 import Firebase from "../Database/Firebase";
 import { connect } from "react-redux";
+import { editEmail } from "../Actions/AuthActions";
 
 
 class Read extends Component {
@@ -90,6 +91,8 @@ class Read extends Component {
                     style={{ width: '100%', paddingHorizontal: 20 }}
                 >
 
+                    <Button title="Change Redux" onPress={ this.props.editEmail('Alterado') } />
+
                     <TextTitle>{this.state.pageTitle} - {this.props.auth.email} </TextTitle>
                     <LerelContent> { this.state.contentText } </LerelContent>
 
@@ -158,4 +161,4 @@ const styles = StyleSheet.create({
 
 const mapStateToProp = (state) => state
 
-export default connect(mapStateToProp)(Read)
+export default connect(mapStateToProp, {editEmail})(Read)

@@ -9,6 +9,13 @@ const auth = (state = [], action ) => {
         }
     }
 
+    if(action.type == 'editEmail'){
+        return {
+            ...state,
+            email: action.payload.email
+        }
+    }
+
     return state
 }
 
