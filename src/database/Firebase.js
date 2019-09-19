@@ -1,20 +1,21 @@
-import firebase from './node_modules/firebase'
-import Axios from './node_modules/axios';
+import firebase from 'firebase'
+import Axios from 'axios';
 
 class Firebase {
 
     constructor(){
-        
-        if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
 
-        this.firebaseConfig = {
-            apiKey: "AIzaSyCspKcdQP7dga2-TEnqYWOIlylipfs8aO4",
-            authDomain: "lere-a4fe1.firebaseapp.com",
-            databaseURL: "https://lere-a4fe1.firebaseio.com",
-            projectId: "lere-a4fe1",
-            storageBucket: "lere-a4fe1.appspot.com",
-            messagingSenderId: "306773820021",
-            appId: "1:306773820021:web:a68da8fce367d00930ee3c"
+        if(!firebase.apps.length) {
+            
+            firebase.initializeApp({
+                apiKey: "AIzaSyCspKcdQP7dga2-TEnqYWOIlylipfs8aO4",
+                authDomain: "lere-a4fe1.firebaseapp.com",
+                databaseURL: "https://lere-a4fe1.firebaseio.com",
+                projectId: "lere-a4fe1",
+                storageBucket: "lere-a4fe1.appspot.com",
+                messagingSenderId: "306773820021",
+                appId: "1:306773820021:web:a68da8fce367d00930ee3c"    
+            })
         }
     }
 

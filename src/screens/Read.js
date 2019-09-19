@@ -1,4 +1,4 @@
-import React, { Component, useState } from './node_modules/react'
+import React, { Component, useState } from 'react'
 import { 
     StyleSheet,
     View,

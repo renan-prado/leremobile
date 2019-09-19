@@ -1,5 +1,5 @@
-import firebase from './node_modules/firebase'
-import Axios from './node_modules/axios';
+import firebase from 'firebase'
+import Axios from 'axios';
 
 var firebaseConfig = {
     apiKey: "AIzaSyCspKcdQP7dga2-TEnqYWOIlylipfs8aO4",

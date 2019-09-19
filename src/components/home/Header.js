@@ -1,8 +1,7 @@
 import { TextInput, Image, View, StyleSheet, Dimensions } from 'react-native';
 import React, { Component } from "react";
 
-import PresetStyles from "../../styles/Presets";
-import Colors from "../../styles/Colors";
+import Colors from "../../Styles/Colors";
 import logoImage from "../../../assets/images/logo.png";
 
 

@@ -1,5 +1,5 @@
 import { StyleSheet, Text, Alert } from 'react-native';
-import React from "./node_modules/react";
+import React from "react";
 import Colors from "./Colors";
 import Fonts from "./Fonts";
 import Sizes from "./Sizes";

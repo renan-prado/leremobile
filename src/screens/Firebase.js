@@ -1,5 +1,5 @@
 import { Text, Image, View, StyleSheet, Dimensions } from 'react-native';
-import React, { Component } from "./node_modules/react";
+import React, { Component } from "react";
 
 import Firebase from '../Database/Firebase'
 
