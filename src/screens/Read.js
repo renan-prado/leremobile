@@ -91,7 +91,7 @@ class Read extends Component {
                     style={{ width: '100%', paddingHorizontal: 20 }}
                 >
 
-                    <Button title="Change Redux" onPress={ this.props.editEmail('Alterado') } />
+                    <Button title="Change Redux" onPress={ () => this.props.editEmail('Alterado') } />
 
                     <TextTitle>{this.state.pageTitle} - {this.props.auth.email} </TextTitle>
                     <LerelContent> { this.state.contentText } </LerelContent>
