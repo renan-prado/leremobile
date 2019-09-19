@@ -5,26 +5,34 @@ import {
   StatusBar,
 } from 'react-native';
 
+// Config
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import Reducers from './src/Reducers/'
 import { YellowBox } from 'react-native';
 
 import Read from "./src/Screens/Read";
 import FirebaseApp from "./src/Screens/Firebase";
 import Home from "./src/Screens/Home";
 
+const store = createStore(Reducers);
+
 const App = () => {
   return (
-    <Fragment>
-      <StatusBar backgroundColor="#444444" barStyle="light-content"/>
-      <SafeAreaView style={styles.container}>
+    <Provider store={store}>  
+      <Fragment>
+        <StatusBar backgroundColor="#444444" barStyle="light-content"/>
+        <SafeAreaView style={styles.container}>
 
-        <Read />
+          <Read />
 
-        {/* <Home /> */}
+          {/* <Home /> */}
 
-        {/* <FirebaseApp /> */}
-      
-      </SafeAreaView>
-    </Fragment>
+          {/* <FirebaseApp /> */}
+        
+        </SafeAreaView>
+      </Fragment>
+    </Provider>
   );
 };
 

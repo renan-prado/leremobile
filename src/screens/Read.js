@@ -17,6 +17,8 @@ import helperButton from "../../assets/images/read_chat_black.png";
 import { TextBase, TextTitle } from "../Styles/Presets";
 import { LerelContent } from "../methods/readArea/readAreaMethods";
 import Firebase from "../Database/Firebase";
+import { connect } from "react-redux";
+
 
 class Read extends Component {
 
@@ -88,7 +90,7 @@ class Read extends Component {
                     style={{ width: '100%', paddingHorizontal: 20 }}
                 >
 
-                    <TextTitle>{this.state.pageTitle}</TextTitle>
+                    <TextTitle>{this.state.pageTitle} - {this.props.auth.email} </TextTitle>
                     <LerelContent> { this.state.contentText } </LerelContent>
 
                 </ScrollView>
@@ -154,4 +156,6 @@ const styles = StyleSheet.create({
     }
 })
 
-export default Read
+const mapStateToProp = (state) => state
+
+export default connect(mapStateToProp)(Read)
