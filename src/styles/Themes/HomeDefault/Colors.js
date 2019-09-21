@@ -1,10 +1,10 @@
 
-import { BLUE_DARK, BLUE_DARK_BRIGHTNESS, GREY, WHITE, GREY_DARK } from "../../Colors";
+import Colors from "../../Colors";
 
 export default {
-    BLUE_HEADER: BLUE_DARK_BRIGHTNESS,
-    WHITE,
-    TEXT_TITLE: BLUE_DARK,
-    TEXT_DETAIL: GREY,
-    TEXT_DRAWER: GREY_DARK
+    HEADER_COLOR: Colors.BLUE_DARK_BRIGHTNESS,
+    WHITE: Colors.WHITE,
+    TEXT_TITLE: Colors.BLUE_DARK,
+    TEXT_DETAIL: Colors.GREY,
+    TEXT_DRAWER: Colors.GREY_DARK
 }

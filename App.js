@@ -3,6 +3,7 @@ import {
   SafeAreaView,
   StyleSheet,
   StatusBar,
+  Text
 } from 'react-native';
 
 // Config
@@ -21,16 +22,10 @@ const App = () => {
   return (
     <Provider store={store}>  
       <Fragment>
-        <StatusBar backgroundColor="#444444" barStyle="light-content"/>
-        <SafeAreaView style={styles.container}>
+        <StatusBar translucent={true} backgroundColor="#ffffff00" barStyle="light-content"/>
 
-          <Read />
-
-          {/* <Home /> */}
-
-          {/* <FirebaseApp /> */}
+        <Home statusBarHeight={StatusBar.currentHeight} />
         
-        </SafeAreaView>
       </Fragment>
     </Provider>
   );

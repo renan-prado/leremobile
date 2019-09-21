@@ -1,4 +1,4 @@
-export default {
+export default colors = {
 
     // Cores Principais
     PRIMARY: '#F15E5E',
