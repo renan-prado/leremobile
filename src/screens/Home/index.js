@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { 
     View,
     Text,
+    StatusBar,
+
 } from "react-native";
 
 import backgroundHeader from "../../../assets/images/background-home.jpg";
@@ -14,6 +16,17 @@ import HomeContent from "./HomeContent";
 
 class Home extends Component {
 
+
+    constructor(props){
+        super(props)
+
+        this.toggleDrawer = this.toggleDrawer.bind(this)    
+    }   
+
+    toggleDrawer(){
+        this.props.navigation.toggleDrawer();
+    }
+
     state = {
     }
 
@@ -24,7 +37,9 @@ class Home extends Component {
 
                     <Header
                         imageBackground={backgroundHeader}
-                        statusBarHeight={this.props.statusBarHeight} />
+                        statusBarHeight={StatusBar.currentHeight}
+                        toggleDrawer={this.toggleDrawer}
+                        />
 
                     <HomeContent />
 

@@ -17,7 +17,9 @@ export default class Header extends Component {
                             
                             <View style={ Style.headerItems }>
 
-                                <TouchableOpacity style={ Style.headerMenu }>
+                                <TouchableOpacity
+                                    style={ Style.headerMenu }
+                                    onPress={ () => this.props.toggleDrawer() }>
                                     
                                     <Image
                                         source={menuImage}
