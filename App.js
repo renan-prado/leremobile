@@ -17,6 +17,7 @@ import Read from "./src/Screens/Read";
 import FirebaseApp from "./src/Screens/Firebase";
 import Home from "./src/Screens/Home";
 import Colors from './src/Styles/Colors'
+import DrawerMenu from "./src/Screens/DrawerMenu";
 
 const drawer = createDrawerNavigator({
 
@@ -30,7 +31,7 @@ const drawer = createDrawerNavigator({
 
 },
   {
-    // contentComponent: '',
+    contentComponent: DrawerMenu,
     initialRouteName: 'Home',
     contentOptions: {
       activeTintColor: Colors.PRIMARY,

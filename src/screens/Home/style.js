@@ -85,10 +85,12 @@ const styles = StyleSheet.create({
         position: 'absolute',
         top: headerHeight - 50,
         borderTopLeftRadius: 50,
+        paddingTop: 30,
+        paddingLeft: 40,
 
         ...shadowBox,
-        
     },
+
 
 
 })
