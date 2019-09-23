@@ -1,13 +1,24 @@
-import { TouchableOpacity, Text, View, ScrollView, Dimensions } from 'react-native';
+import { TouchableOpacity, Text, View, ScrollView, FlatList } from 'react-native';
 import React, { Component } from "react";
 import Style from "./style";
 import { Subtitle } from "../../Styles/Patterns";
-import BookItem from "./BookItem";
-
-import imageNarnia from "../../../assets/images/narnia.png";
-import imageMenina from "../../../assets/images/menina-roubava.jpg";
+import BookItem from "../BookItem";
 
 export default class BookListHorizontal extends Component {
+
+    constructor(props){
+        super(props)
+        
+        this.renderBooks = this.renderBooks.bind(this);
+    }
+
+    renderBooks = ({item}) => (
+        <BookItem
+            progress={item.progress}
+            title={item.title}
+            image={item.image}
+        ></BookItem>
+    )
 
     render(){
         return(
@@ -15,7 +26,7 @@ export default class BookListHorizontal extends Component {
 
                 <View style={Style.topArea}>    
                     <Subtitle style={Style.subtitle}>
-                        { this.props.title }
+                        { this.props.section.title }
                     </Subtitle>
 
                     <TouchableOpacity>
@@ -26,39 +37,12 @@ export default class BookListHorizontal extends Component {
 
                 <ScrollView horizontal={true} style={{ marginBottom: 50 }}>
 
-                    <BookItem
-                        progress={80}
-                        title="A bela e a fera"
-                        image={imageNarnia}
-                    ></BookItem>
-                    
-                    <BookItem
-                        progress={30}
-                        title="A menina que roubava livros"
-                        image={imageMenina}
-
-                    ></BookItem>
-                    
-                    <BookItem
-                        progress={10}
-                        title="Narnia"
-                        image={imageNarnia}
-
-                    ></BookItem>
-                    
-                    <BookItem
-                        progress={0}
-                        title="101 Dalmatas"
-                        image={imageNarnia}
-
-                    ></BookItem>
-                    
-                    <BookItem
-                        progress={0}
-                        title="O rei leão"
-                        image={imageNarnia}
-
-                    ></BookItem>
+                    <FlatList
+                        horizontal={true}
+                         data={this.props.section.books}
+                         renderItem={this.renderBooks}
+                         keyExtractor={item => item.title}
+                    />
 
                 </ScrollView>
 

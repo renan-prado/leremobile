@@ -25,14 +25,6 @@ const styles = StyleSheet.create({
         color: Colors.GREY
     },
 
-    bookItem: {
-        width: '100%',
-        height: 250,
-        backgroundColor: '#eee',
-        marginTop: 20,
-        marginBottom: 10,
-        borderRadius: 10
-    }
 
 })
 

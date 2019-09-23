@@ -16,23 +16,28 @@ import { createDrawerNavigator } from 'react-navigation-drawer'
 import Read from "./src/Screens/Read";
 import FirebaseApp from "./src/Screens/Firebase";
 import Home from "./src/Screens/Home";
+import BookView from "./src/Screens/BookView";
 import Colors from './src/Styles/Colors'
 import DrawerMenu from "./src/Screens/DrawerMenu";
 
 const drawer = createDrawerNavigator({
 
   Home: {
-    screen: Home
+    screen: Home,
   },
 
   Read: {
     screen: Read
+  },
+
+  BookView: {
+    screen: BookView
   }
 
 },
   {
     contentComponent: DrawerMenu,
-    initialRouteName: 'Home',
+    initialRouteName: 'BookView',
     contentOptions: {
       activeTintColor: Colors.PRIMARY,
       inactiveTintColor: Colors.GREY,
