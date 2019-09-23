@@ -17,6 +17,7 @@ import Read from "./src/Screens/Read";
 import FirebaseApp from "./src/Screens/Firebase";
 import Home from "./src/Screens/Home";
 import BookView from "./src/Screens/BookView";
+import Categories from "./src/Screens/Categories";
 import Colors from './src/Styles/Colors'
 import DrawerMenu from "./src/Screens/DrawerMenu";
 
@@ -32,12 +33,16 @@ const drawer = createDrawerNavigator({
 
   BookView: {
     screen: BookView
+  },
+
+  Categories: {
+    screen: Categories
   }
 
 },
   {
     contentComponent: DrawerMenu,
-    initialRouteName: 'BookView',
+    initialRouteName: 'Categories',
     contentOptions: {
       activeTintColor: Colors.PRIMARY,
       inactiveTintColor: Colors.GREY,
