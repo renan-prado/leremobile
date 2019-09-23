@@ -18,6 +18,10 @@ import FirebaseApp from "./src/Screens/Firebase";
 import Home from "./src/Screens/Home";
 import BookView from "./src/Screens/BookView";
 import Categories from "./src/Screens/Categories";
+import Login from "./src/Screens/Login";
+import SignUp from "./src/Screens/SignUp";
+import Perfil from "./src/Screens/Perfil";
+
 import Colors from './src/Styles/Colors'
 import DrawerMenu from "./src/Screens/DrawerMenu";
 
@@ -37,12 +41,30 @@ const drawer = createDrawerNavigator({
 
   Categories: {
     screen: Categories
+  },
+
+  Perfil: {
+    screen: Perfil
+  },
+
+  Login: {
+    screen: Login,
+    navigationOptions:{
+      drawerLockMode: 'locked-closed'
+    }
+  },
+
+  SignUp: {
+    screen: SignUp,
+    navigationOptions:{
+      drawerLockMode: 'locked-closed'
+    }
   }
 
 },
   {
     contentComponent: DrawerMenu,
-    initialRouteName: 'Categories',
+    initialRouteName: 'Home',
     contentOptions: {
       activeTintColor: Colors.PRIMARY,
       inactiveTintColor: Colors.GREY,

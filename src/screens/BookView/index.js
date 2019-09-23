@@ -49,7 +49,7 @@ class BookView extends Component {
 
                             <View style={[Style.headerContainerTop, { marginTop: StatusBar.currentHeight }]}>
 
-                                <TouchableOpacity>
+                                <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
                                     <Image 
                                         style={Style.arrowBack}
                                         source={imageArrowBack}

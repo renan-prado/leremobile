@@ -6,6 +6,7 @@ export default colors = {
 
     // Cores da aplicação
     GREEN: '#5DE4A0',
+    GREEN_DARK: '#41B87C',
     BLUE: '#32A7E5',
     PURPLE: '#9D69EA',
     YELLOW: '#FFE000',
