@@ -29,7 +29,7 @@ class PersonTalk extends Component {
                 </View>
 
                 <View style={Style.personTextContainer}>
-                    <Text style={Style.personText}>Qual é o seu nome? Lorem Ipsum teste teste </Text>
+                    <Text style={Style.personText}>{ this.props.msg }</Text>
                 </View>
 
             </View>

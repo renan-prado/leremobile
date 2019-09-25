@@ -61,13 +61,19 @@ const styles = StyleSheet.create({
 
     talkArea: {
         flex: 1,
+        flexDirection: 'column',
+        paddingBottom: 20
+    },
+
+    talkAreaScroll: {
+        flex: 1,
+        flexDirection: 'column',
         justifyContent: 'flex-end'
     },
 
     personTalk: {
         width: '100%',
         flexDirection: 'row',
-        marginBottom: 10,
 
     },
 
@@ -80,28 +86,28 @@ const styles = StyleSheet.create({
     },
 
     personTextContainer: {
-        width: Dimensions.get('window').width - 100,
+        maxWidth: Dimensions.get('window').width - 100,
     },
 
     personText: {
         backgroundColor: Colors.PRIMARY,
         alignItems: 'center',
         justifyContent: 'center',
-        paddingVertical: 10,
+        paddingVertical: 15,
         paddingHorizontal: 20,
         borderRadius: 10,
         borderTopLeftRadius: 0,
         color: Colors.WHITE,
         fontSize: 17,
-        marginTop: 13
+        marginTop: 15,
     },
 
     userTalk: {
         width: '100%',
         flexDirection: 'row',
         justifyContent: 'flex-end',
+        alignItems: 'center',
         paddingRight: 10,
-        marginBottom: 10,
     },
 
     userTextContainer: {
@@ -112,14 +118,39 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.SECUNDARY,
         alignItems: 'center',
         justifyContent: 'center',
-        paddingVertical: 10,
+        paddingVertical: 15,
         paddingHorizontal: 20,
         borderRadius: 10,
         borderTopRightRadius: 0,
         color: Colors.WHITE,
         fontSize: 17,
+        textAlign: 'right',
         marginTop: 10,
-        textAlign: 'right'
+    },
+
+    bottom: {
+        width: '100%',
+        height: 60,
+        borderTopWidth: 1,
+        borderTopColor: '#eeeeee',
+        flexDirection: 'row',
+        ...shadowBox
+    },
+
+    userInput: {
+        width: Dimensions.get('window').width - 80,
+        height: '100%',
+        paddingHorizontal: 20,
+        fontSize: 16,
+        backgroundColor: Colors.WHITE,
+    },
+    
+    bottomButton: {
+        width: 80,
+        height: '100%',
+        borderRadius: 0,
+        backgroundColor: Colors.WHITE,
+        color: Colors.PRIMARY,
     }
 
 })

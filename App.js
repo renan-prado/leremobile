@@ -64,7 +64,7 @@ const drawer = createDrawerNavigator({
 },
   {
     contentComponent: DrawerMenu,
-    initialRouteName: 'Home',
+    initialRouteName: 'SignUp',
     contentOptions: {
       activeTintColor: Colors.PRIMARY,
       inactiveTintColor: Colors.GREY,

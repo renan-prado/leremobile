@@ -24,7 +24,7 @@ class UserTalk extends Component {
         return (
             <View style={Style.userTalk}>
                 <View style={Style.userTextContainer}>
-                    <Text style={Style.userText}>Renan Prado Renan Prado Renan Prado Renan Prado Renan Prado</Text>
+                    <Text style={Style.userText}>{ this.props.msg }</Text>
                 </View>
             </View>
         )

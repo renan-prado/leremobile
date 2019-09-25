@@ -76,8 +76,8 @@ module.exports.TextBase = ({ children, textColor = Colors.TEXT_PRIMARY, style = 
   </Text>
 )
 
-module.exports.ButtonLere = ({ title, style={}, onPress = () => null}) => (
-  <TouchableOpacity activeOpacity={0.9} onPress={onPress}>
+module.exports.ButtonLere = ({ title, textStyle = {}, style={}, activeOpacity=0.9, onPress = () => null}) => (
+  <TouchableOpacity activeOpacity={activeOpacity} onPress={onPress}>
     <View
       color={Colors.PRIMARY}
       style={{
@@ -91,7 +91,7 @@ module.exports.ButtonLere = ({ title, style={}, onPress = () => null}) => (
         ...style
       }}
     >
-      <Text style={{ color: Colors.WHITE }}> {title.toUpperCase()} </Text>
+      <Text style={textStyle}> {title.toUpperCase()} </Text>
     
     </View>
   </TouchableOpacity>
